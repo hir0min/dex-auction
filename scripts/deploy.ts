@@ -13,9 +13,9 @@ async function main() {
   // Deploy contracts
   const dexAuction = await ethers.getContractFactory("DexAuction");
   const contract = await dexAuction.deploy(
-    process.env.DEX_TOKEN_ADDR,
-    process.env.OPERATOR_ADDR,
-    process.env.AUCTION_LENGTH
+    process.env.DEX_TOKEN_ADDR!,
+    process.env.OPERATOR_ADDR!,
+    process.env.AUCTION_LENGTH!
   );
 
   // Wait for the contract to be deployed before exiting the script
