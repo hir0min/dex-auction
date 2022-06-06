@@ -20,10 +20,21 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 const config: HardhatUserConfig = {
   solidity: "0.8.4",
   networks: {
-    ropsten: {
-      url: process.env.ROPSTEN_URL || "",
+    bsctestnet: {
+      url: "https://data-seed-prebsc-1-s1.binance.org:8545",
+      chainId: 97,
       accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+        process.env.ADMIN_PRIVATE_KEY !== undefined
+          ? [process.env.ADMIN_PRIVATE_KEY]
+          : [],
+    },
+    bscmainnet: {
+      url: "https://bsc-dataseed.binance.org/",
+      chainId: 56,
+      accounts:
+        process.env.ADMIN_PRIVATE_KEY !== undefined
+          ? [process.env.ADMIN_PRIVATE_KEY]
+          : [],
     },
   },
   gasReporter: {
@@ -31,7 +42,7 @@ const config: HardhatUserConfig = {
     currency: "USD",
   },
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY,
+    apiKey: process.env.BSCSCAN_API_KEY,
   },
 };
 
