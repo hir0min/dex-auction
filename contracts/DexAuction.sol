@@ -206,6 +206,7 @@ contract DexAuction is IDexAuction, Ownable, ReentrancyGuard {
      */
     function removeWhitelist(address[] calldata _bidders)
         external
+        override
         onlyOperator
     {
         require(
@@ -296,7 +297,7 @@ contract DexAuction is IDexAuction, Ownable, ReentrancyGuard {
      * @param _bidLimit: minimal dex committed to be a winner
      * @dev Callable by operator
      */
-    function closeAuction(uint256 _bidLimit) external onlyOperator {
+    function closeAuction(uint256 _bidLimit) external override onlyOperator {
         require(
             (currentAuctionId != 0) ||
                 auctions[currentAuctionId].status == Status.Open,
