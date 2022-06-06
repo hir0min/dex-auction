@@ -635,6 +635,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@nomicfoundation/hardhat-network-helpers@^1.0.0-beta.2":
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@nomicfoundation/hardhat-network-helpers/-/hardhat-network-helpers-1.0.0-beta.2.tgz#96104d1ade427d16ff9e2af84cc2f87da6b65a31"
+  integrity sha512-MtY9Agtt7kuR7M+aIpzeTxU/ZOGJXm/LcakmMQ+I8xTRncbHXzaNRSNwbqvyJUC+zBkLEyTib4LYmQ+GPv/Keg==
+  dependencies:
+    ethereumjs-util "^7.1.4"
+
 "@nomiclabs/hardhat-ethers@^2.0.6":
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@nomiclabs/hardhat-ethers/-/hardhat-ethers-2.0.6.tgz#1c695263d5b46a375dcda48c248c4fba9dfe2fc2"
